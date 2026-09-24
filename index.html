@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A framework for building conversational user interfaces.">
+  <title>Head.js</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="navbar" aria-hidden="true"></header>
+  <main id="main">
+    <section class="home-container"><div class="home-splash"><div class="hero-content"><h1>Head.js</h1><h2>The only script in your &lt;head&gt;. @head.js/snippet-*.</h2><a class="primary large" href="#intuitive-apis">Get Started</a></div></div><div class="triangle triangle-white"></div></section>
+    <section class="main-container">
+      <div class="features"><h2>Why Head.js?</h2><div class="features-grid">
+        <article class="feature"><img src="assets/element_flexible.svg" alt="Declarative"><div><h3>Declarative</h3><p>Head.js takes care of the complexity of conversational UIs for you. Design actions for each event and state in your application, and Head.js will run accordingly.</p><p>This approach makes your code more predictable and easier to debug.</p></div></article>
+        <article class="feature"><img src="assets/element_morden.svg" alt="Native User Experience"><div><h3>Native User Experience</h3><p>Head.js lets you create apps on every channel and never compromise on your users' experience.</p><p>You can apply progressive enhancement or graceful degradation strategy on your building blocks.</p></div></article>
+        <article class="feature"><img src="assets/element_modular.svg" alt="Easy Setup"><div><h3>Easy Setup</h3><p>With Head.js, you only need a few configurations to make your bot work with channels, automatic server listening, webhook setup, signature verification and so much more.</p></div></article>
+        <article class="feature"><img src="assets/element_anywhere.svg" alt="Ready for Production"><div><h3>Ready for Production</h3><p>There are thousands of bots powered by Head.js.</p><p>It has been optimized for real world use cases, automatic batching request and dozens of other compelling features.</p></div></article>
+      </div></div>
+      <div class="triangle triangle-gray"></div>
+      <section class="demo" id="api"><div class="demo-content"><div class="code-block" aria-label="JavaScript example"><pre><code><span class="kw">&lt;script</span> <span class="fn">src</span>=<span class="str">"app.js"</span><span class="kw">&gt;</span>
+  <span class="fn">head.require</span>([ <span class="str">'http://cdn.example.com/a.css'</span>, <span class="str">'http://cdn.example.com/b.js'</span> ], () =&gt; {});
+
+  <span class="fn">head.bridge.register</span>(<span class="str">'com.example.sdk@1.0.0'</span>, (register) =&gt; {
+    <span class="fn">head.require</span>([ <span class="str">'http://cdn.example.com/sdk-1.0.0.css'</span>, <span class="str">'http://cdn.example.com/sdk-1.0.0.js'</span> ], () =&gt; {
+      <span class="kw">const</span> { SdkFactory } = window;
+      <span class="kw">const</span> sdk = <span class="kw">new</span> <span class="fn">SdkFactory</span>();
+      <span class="fn">register</span>(sdk);
+    });
+  });
+<span class="kw">&lt;/script&gt;</span>
+<span class="kw">&lt;script</span> <span class="fn">src</span>=<span class="str">"chunk-1.js"</span><span class="kw">&gt;</span>
+  <span class="kw">const</span> [ sdk ] = <span class="kw">await</span> <span class="fn">head.bridge.initialize</span>([<span class="str">'com.example.sdk@1.0.0'</span>]);
+  <span class="fn">sdk.do</span>();
+<span class="kw">&lt;/script&gt;</span></code></pre></div><div class="description"><h3 id="intuitive-apis">Intuitive APIs</h3><p>Head.js has some functional and declarative approaches can help you define your conversations.</p><p>For most applications, you will begin by defining routes that you may familiar with when developing a web application.</p><p>Besides router, you can describe the side effects with function actions. It's the most important building part in the Head.js applications.</p></div></div></section>
+      <section class="get-started" id="docs"><div class="get-started-card"><div class="get-started-card-background"><div class="primary-box"></div><div class="secondary-box"></div></div><img src="assets/logo-head-js.png" alt="Head.js Logo"><div class="get-started-content"><h2>Build Your World Today!</h2><a class="primary large" href="#intuitive-apis">Get Started Now</a></div></div></section>
+    </section>
+  </main>
+  <footer class="footer" id="blog"><div class="footer-inner"><div class="footer-links"><div><div class="footer-title">Community</div><a href="https://github.com/head-js/head.js" target="_blank" rel="noopener">GitHub</a></div></div><div class="footer-bottom"><img src="assets/logo-head-js.png" alt="Head.js logo"><div>© 2016 - PRESENT HEAD.JS ALL RIGHTS RESERVED.</div></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
